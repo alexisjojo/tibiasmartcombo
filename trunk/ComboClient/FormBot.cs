@@ -229,7 +229,6 @@ namespace ComboClient
         {
             timerProgram.Stop();
             timerManashield.Stop();
-            timerPing.Stop();
             if (socketclient != null)
                 socketclient.Disconnect();
             if (socketclient.isConnected)
@@ -405,15 +404,6 @@ namespace ComboClient
             else
                 verschil = verschilx;
             return verschil;
-        }
-
-        private void timerPing_Tick(object sender, EventArgs e)
-        {
-           // System.Console.WriteLine("Timer ping");
-            if (client == null || client.LoggedIn)
-            {
-                doPing();
-            }
         }
 
         private void timerManashield_Tick(object sender, EventArgs e)

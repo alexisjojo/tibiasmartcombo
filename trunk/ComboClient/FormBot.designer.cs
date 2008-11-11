@@ -30,7 +30,6 @@ namespace ComboClient
         {
             this.components = new System.ComponentModel.Container();
             this.timerProgram = new System.Windows.Forms.Timer(this.components);
-            this.timerPing = new System.Windows.Forms.Timer(this.components);
             this.timerManashield = new System.Windows.Forms.Timer(this.components);
             this.timerHealingSpell = new System.Windows.Forms.Timer(this.components);
             this.label7 = new System.Windows.Forms.Label();
@@ -105,11 +104,6 @@ namespace ComboClient
             // timerProgram
             // 
             this.timerProgram.Tick += new System.EventHandler(this.timerProgram_Tick);
-            // 
-            // timerPing
-            // 
-            this.timerPing.Interval = 3000;
-            this.timerPing.Tick += new System.EventHandler(this.timerPing_Tick);
             // 
             // timerManashield
             // 
@@ -714,7 +708,6 @@ namespace ComboClient
         #endregion
 
         private System.Windows.Forms.Timer timerProgram;
-        private System.Windows.Forms.Timer timerPing;
         private System.Windows.Forms.Timer timerManashield;
         private System.Windows.Forms.Timer timerHealingSpell;
         private System.Windows.Forms.Label label7;
